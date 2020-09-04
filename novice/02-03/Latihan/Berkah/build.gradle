@@ -1,0 +1,36 @@
+plugins {
+    // Apply the java plugin to add support for Java
+    id 'java'
+
+    // Apply the application plugin to add support for building a CLI application.
+    id 'application'
+}
+
+application {
+    // Define the main class for the application.
+    mainClassName = 'Berkah.App'
+}
+
+
+// In this section you declare where to find the dependencies of your project
+repositories {
+    // Use jcenter for resolving your dependencies.
+    // You can declare any Maven/Ivy/file repository here.
+    jcenter()
+}
+
+
+dependencies {
+       implementation 'com.google.guava:guava:29.0-jre'
+
+    // Use JUnit test framework
+    testImplementation 'junit:junit:4.12'
+
+    compile(group: 'org.postgresql',name : 'postgresql', version: '42.0.0')
+    
+    implementation('org.springframework.boot:spring-boot-starter-data-jpa')
+
+   
+	
+}
+
