@@ -16,12 +16,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 
 
-@RestController
+@Controller
 @RequestMapping(path="/demo")
 public class MainController {
     @Autowired
     private UserRepository userRepository;
-   
+
 @PostMapping(path="/add") // Map ONLY POST Requests
 public @ResponseBody User addNewUser(@RequestBody User user) {  
     return userRepository.save(user);

@@ -1,10 +1,9 @@
-package com.aji.coba.repository;
+package com.project.aji.repository;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.aji.coba.model.User;
+import com.project.aji.model.User;
 
 public interface UserRepository extends CrudRepository<User, Integer> {
-    
 
 }
